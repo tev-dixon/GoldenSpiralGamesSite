@@ -1,21 +1,34 @@
+/*
+  This @font-face rule defines a new font family named "PressStart2P"
+  and tells the browser to download the TTF file.
+  The path is relative to this CSS file's location.
+*/
 @font-face {
-    font-family: 'PressStart2P';
-    src: url('assets/fonts/PressStart2P.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Metallica';
-    src: url('assets/fonts/MetallicaInspired.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  .font-press-start {
-    font-family: 'PressStart2P', sans-serif;
-  }
-  
-  .font-metallica {
-    font-family: 'Metallica', sans-serif;
-  }
+  font-family: 'PressStart2P';
+  /* This path means "go up one directory, then into the 'fonts' directory" */
+  src: url('../fonts/PressStart2P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+  This rule does the same for the Metallica-inspired font.
+*/
+@font-face {
+  font-family: 'Metallica';
+  src: url('../fonts/MetallicaInspired.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+  These classes can be used to apply the fonts. 
+  Your other CSS files will now correctly use these font-family definitions.
+*/
+.font-press-start {
+  font-family: 'PressStart2P', sans-serif;
+}
+
+.font-metallica {
+  font-family: 'Metallica', sans-serif;
+}
