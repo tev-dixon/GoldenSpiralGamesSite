@@ -11,7 +11,7 @@ html, body {
     display: flex;
     flex-direction: column;
     background-color: var(--background);
-    background-image: url('/static/images/background_alt.svg');
+    background-image: url('static/images/background_alt.svg');
     background-size: 50vh;
     background-repeat: repeat;
     -webkit-font-smoothing: antialiased !important;

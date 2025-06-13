@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapid Division</title>
+    <base href="https://tev-dixon.github.io/GoldenSpiralGamesSite/">
     
-    <link rel="icon" href="/assets/icons/gs-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/icons/gs-favicon.ico" type="image/x-icon">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="stylesheet" href="/assets/css/colors.css">
-    <link rel="stylesheet" href="/assets/css/common.css">
-    <link rel="stylesheet" href="/assets/css/games.css">
-    <link rel="stylesheet" href="/assets/css/overlay.css">
-    <link rel="stylesheet" href="/assets/css/rapid_division.css">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/games.css">
+    <link rel="stylesheet" href="assets/css/overlay.css">
+    <link rel="stylesheet" href="assets/css/rapid_division.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     
     <style>
         body {
-            background-image: url('/assets/images/background_alt.svg');
+            background-image: url('assets/images/background_alt.svg');
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <a class="navbar-brand navbar-brand-custom" href="/index.html">GSGames</a>
+        <a class="navbar-brand navbar-brand-custom" href="index.html">GSGames</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/about.html">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -53,7 +54,7 @@
                     <button id="sfxToggleBtn" onclick="toggleSFX(this)">Disable Sound FX</button>
                     <button id="musicToggleBtn" onclick="toggleMusic(this)">Disable Music</button>
                     <hr>
-                    <button id="exitBtn" onclick="window.location.href='/index.html';">Exit</button>
+                    <button id="exitBtn" onclick="window.location.href='index.html';">Exit</button>
                 </div>
         
                 <div id="countdown-overlay" class="overlay">
@@ -67,7 +68,7 @@
                 
         
                 <span>
-                    <img src="/assets/images/pixelated-clock-icon.png" alt="Timer Clock"/>
+                    <img src="assets/images/pixelated-clock-icon.png" alt="Timer Clock"/>
                     <h1 id="timer" class="ui hardware-accelerated"></h1>
                 </span>
         
@@ -150,23 +151,23 @@
         </div>
     </main>
     
-    <audio id="correctAudio" src="/assets/audio/correct.mp3"></audio>
-    <audio id="incorrectAudio" src="/assets/audio/incorrect.mp3"></audio>
-    <audio id="rankupAudio" src="/assets/audio/rankup.mp3"></audio>
-    <audio id="startAudio" src="/assets/audio/start.mp3"></audio>
-    <audio id="countdownAudio" src="/assets/audio/countdown.mp3"></audio>
-    <audio id="gameOverAudio" src="/assets/audio/game-over.mp3"></audio>
-    <audio id="winAudio" src="/assets/audio/win.mp3"></audio>
+    <audio id="correctAudio" src="assets/audio/correct.mp3"></audio>
+    <audio id="incorrectAudio" src="assets/audio/incorrect.mp3"></audio>
+    <audio id="rankupAudio" src="assets/audio/rankup.mp3"></audio>
+    <audio id="startAudio" src="assets/audio/start.mp3"></audio>
+    <audio id="countdownAudio" src="assets/audio/countdown.mp3"></audio>
+    <audio id="gameOverAudio" src="assets/audio/game-over.mp3"></audio>
+    <audio id="winAudio" src="assets/audio/win.mp3"></audio>
 
-    <audio id="pixelDreamsAudio" class="music-audio" src="/assets/audio/music/Pixel_Dreams.mp3"></audio>
-    <audio id="pixelPowerAudio" class="music-audio" src="/assets/audio/music/Pixel_Power.mp3"></audio>
-    <audio id="pixelQuestAudio" class="music-audio" src="/assets/audio/music/Pixel_Quest.mp3"></audio>
-    <audio id="pixelRacetrackAudio" class="music-audio" src="/assets/audio/music/Pixel_Racetrack.mp3"></audio>
+    <audio id="pixelDreamsAudio" class="music-audio" src="assets/audio/music/Pixel_Dreams.mp3"></audio>
+    <audio id="pixelPowerAudio" class="music-audio" src="assets/audio/music/Pixel_Power.mp3"></audio>
+    <audio id="pixelQuestAudio" class="music-audio" src="assets/audio/music/Pixel_Quest.mp3"></audio>
+    <audio id="pixelRacetrackAudio" class="music-audio" src="assets/audio/music/Pixel_Racetrack.mp3"></audio>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
     
-    <script src="/assets/js/rapid_division.js"></script>
+    <script src="assets/js/rapid_division.js"></script>
 </body>
 </html>

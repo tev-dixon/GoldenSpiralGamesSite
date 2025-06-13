@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fetch JSON factor_list data
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/assets/data/rapid_division_fakes.json').then(response => {
+    fetch('assets/data/rapid_division_fakes.json').then(response => {
         if (response.ok) {
             return response.json();
         }

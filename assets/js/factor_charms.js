@@ -3,7 +3,7 @@
 // Fetches
 // Fetch JSON primeData data
 function fetchPrimeData() {
-    return fetch('/assets/data/factor_charms_primeData.json')
+    return fetch('assets/data/factor_charms_primeData.json')
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -22,7 +22,7 @@ function fetchPrimeData() {
 
 // Fetch JSON levelData data
 function fetchLevelData() {
-    return fetch('/assets/data/factor_charms_levelData.json')
+    return fetch('assets/data/factor_charms_levelData.json')
         .then(response => {
             if (response.ok) {
                 return response.json();
