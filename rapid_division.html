@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Division</title>
+    
+    <link rel="icon" href="/assets/icons/gs-favicon.ico" type="image/x-icon">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/colors.css">
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/games.css">
+    <link rel="stylesheet" href="/assets/css/overlay.css">
+    <link rel="stylesheet" href="/assets/css/rapid_division.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    
+    <style>
+        body {
+            background-image: url('/assets/images/background_alt.svg');
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <a class="navbar-brand navbar-brand-custom" href="/index.html">GSGames</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+    <main>
+        <div class="cover">
+            <div class="play-container">
+                
+                <div id="menu-overlay" class="overlay show">
+                    <h3 id="menuHeader"></h3>
+                    <h3 id="menuScore"></h3>
+                    <h3 id="menuRank"></h3>
+                    <hr>
+                    <button id="menuButton" onclick="startGame()">PLAY GAME</button>
+                    <hr>
+                    <button id="sfxToggleBtn" onclick="toggleSFX(this)">Disable Sound FX</button>
+                    <button id="musicToggleBtn" onclick="toggleMusic(this)">Disable Music</button>
+                    <hr>
+                    <button id="exitBtn" onclick="window.location.href='/index.html';">Exit</button>
+                </div>
+        
+                <div id="countdown-overlay" class="overlay">
+                    <h2 id="countdownHeader" class="hardware-accelerated"></h2>
+                </div>
+        
+                <div id="rankup-overlay" class="overlay">
+                    <h2 id="rankupHeader">Rank Up!</h2>
+                    <h3>You are now </h3> <h3 class="display: inline" id="rankupRank"></h3>
+                </div>
+                
+        
+                <span>
+                    <img src="/assets/images/pixelated-clock-icon.png" alt="Timer Clock"/>
+                    <h1 id="timer" class="ui hardware-accelerated"></h1>
+                </span>
+        
+                <h1 id="question" class="question hardware-accelerated">...</h1>
+        
+                <div class="lower-container hardware-accelerated">
+                    <div class="rank-container rank-container-left">
+                        <svg viewBox="0 0 310 430" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                            <rect id="lead-0" width="50" height="50" x="10" y="370" fill="#470004"></rect>
+                            <rect id="lead-1" width="50" height="50" x="70" y="370" fill="#470004"></rect>
+                            <rect id="lead-2" width="50" height="50" x="130" y="370" fill="#470004"></rect>
+                            <rect id="lead-3" width="50" height="50" x="190" y="370" fill="#470004"></rect>
+                            <rect id="lead-4" width="50" height="50" x="250" y="370" fill="#470004"></rect>
+                            <rect id="iron-0" width="50" height="50" x="10" y="310" fill="#470004"></rect>
+                            <rect id="iron-1" width="50" height="50" x="70" y="310" fill="#470004"></rect>
+                            <rect id="iron-2" width="50" height="50" x="130" y="310" fill="#470004"></rect>
+                            <rect id="iron-3" width="50" height="50" x="190" y="310" fill="#470004"></rect>
+                            <rect id="iron-4" width="50" height="50" x="250" y="310" fill="#470004"></rect>
+                            <rect id="bron-0" width="50" height="50" x="10" y="250" fill="#470004"></rect>
+                            <rect id="bron-1" width="50" height="50" x="70" y="250" fill="#470004"></rect>
+                            <rect id="bron-2" width="50" height="50" x="130" y="250" fill="#470004"></rect>
+                            <rect id="bron-3" width="50" height="50" x="190" y="250" fill="#470004"></rect>
+                            <rect id="bron-4" width="50" height="50" x="250" y="250" fill="#470004"></rect>
+                            <rect id="silv-0" width="50" height="50" x="70" y="190" fill="#470004"></rect>
+                            <rect id="silv-1" width="50" height="50" x="130" y="190" fill="#470004"></rect>
+                            <rect id="silv-2" width="50" height="50" x="190" y="190" fill="#470004"></rect>
+                            <rect id="silv-3" width="50" height="50" x="250" y="190" fill="#470004"></rect>
+                            <rect id="gold-0" width="50" height="50" x="130" y="130" fill="#470004"></rect>
+                            <rect id="gold-1" width="50" height="50" x="190" y="130" fill="#470004"></rect>
+                            <rect id="gold-2" width="50" height="50" x="250" y="130" fill="#470004"></rect>
+                            <rect id="plat-0" width="50" height="50" x="190" y="70" fill="#470004"></rect>
+                            <rect id="plat-1" width="50" height="50" x="250" y="70" fill="#470004"></rect>
+                            <rect id="diam-0" width="50" height="50" x="250" y="10" fill="#470004"></rect>
+                        </svg>
+                    </div>
+                    
+                    <div>
+                        <div class="answers-grid hardware-accelerated">
+                            <button id="answer-btn-0" class="answer-btn hardware-accelerated" onclick="checkAnswer(this)"></button>
+                            <button id="answer-btn-1" class="answer-btn hardware-accelerated" onclick="checkAnswer(this)"></button>
+                            <button id="answer-btn-2" class="answer-btn hardware-accelerated" onclick="checkAnswer(this)"></button>
+                            <button id="answer-btn-3" class="answer-btn hardware-accelerated" onclick="checkAnswer(this)"></button>
+                            <button id="answer-btn-4" class="answer-btn hardware-accelerated" onclick="checkAnswer(this)"></button>
+                            <button id="answer-btn-5" class="answer-btn hardware-accelerated" onclick="checkAnswer(this)"></button>
+                        </div>
+                    </div>
+        
+                    <div class="rank-container rank-container-right">
+                        <svg viewBox="0 0 310 430" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                            <rect id="lead-9" width="50" height="50" x="10" y="370" fill="#470004"></rect>
+                            <rect id="lead-8" width="50" height="50" x="70" y="370" fill="#470004"></rect>
+                            <rect id="lead-7" width="50" height="50" x="130" y="370" fill="#470004"></rect>
+                            <rect id="lead-6" width="50" height="50" x="190" y="370" fill="#470004"></rect>
+                            <rect id="lead-5" width="50" height="50" x="250" y="370" fill="#470004"></rect>
+                            <rect id="iron-9" width="50" height="50" x="10" y="310" fill="#470004"></rect>
+                            <rect id="iron-8" width="50" height="50" x="70" y="310" fill="#470004"></rect>
+                            <rect id="iron-7" width="50" height="50" x="130" y="310" fill="#470004"></rect>
+                            <rect id="iron-6" width="50" height="50" x="190" y="310" fill="#470004"></rect>
+                            <rect id="iron-5" width="50" height="50" x="250" y="310" fill="#470004"></rect>
+                            <rect id="bron-9" width="50" height="50" x="10" y="250" fill="#470004"></rect>
+                            <rect id="bron-8" width="50" height="50" x="70" y="250" fill="#470004"></rect>
+                            <rect id="bron-7" width="50" height="50" x="130" y="250" fill="#470004"></rect>
+                            <rect id="bron-6" width="50" height="50" x="190" y="250" fill="#470004"></rect>
+                            <rect id="bron-5" width="50" height="50" x="250" y="250" fill="#470004"></rect>
+                            <rect id="silv-7" width="50" height="50" x="70" y="190" fill="#470004"></rect>
+                            <rect id="silv-6" width="50" height="50" x="130" y="190" fill="#470004"></rect>
+                            <rect id="silv-5" width="50" height="50" x="190" y="190" fill="#470004"></rect>
+                            <rect id="silv-4" width="50" height="50" x="250" y="190" fill="#470004"></rect>
+                            <rect id="gold-5" width="50" height="50" x="130" y="130" fill="#470004"></rect>
+                            <rect id="gold-4" width="50" height="50" x="190" y="130" fill="#470004"></rect>
+                            <rect id="gold-3" width="50" height="50" x="250" y="130" fill="#470004"></rect>
+                            <rect id="plat-3" width="50" height="50" x="190" y="70" fill="#470004"></rect>
+                            <rect id="plat-2" width="50" height="50" x="250" y="70" fill="#470004"></rect>
+                            <rect id="diam-1" width="50" height="50" x="250" y="10" fill="#470004"></rect>
+                        </svg>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </main>
+    
+    <audio id="correctAudio" src="/assets/audio/correct.mp3"></audio>
+    <audio id="incorrectAudio" src="/assets/audio/incorrect.mp3"></audio>
+    <audio id="rankupAudio" src="/assets/audio/rankup.mp3"></audio>
+    <audio id="startAudio" src="/assets/audio/start.mp3"></audio>
+    <audio id="countdownAudio" src="/assets/audio/countdown.mp3"></audio>
+    <audio id="gameOverAudio" src="/assets/audio/game-over.mp3"></audio>
+    <audio id="winAudio" src="/assets/audio/win.mp3"></audio>
+
+    <audio id="pixelDreamsAudio" class="music-audio" src="/assets/audio/music/Pixel_Dreams.mp3"></audio>
+    <audio id="pixelPowerAudio" class="music-audio" src="/assets/audio/music/Pixel_Power.mp3"></audio>
+    <audio id="pixelQuestAudio" class="music-audio" src="/assets/audio/music/Pixel_Quest.mp3"></audio>
+    <audio id="pixelRacetrackAudio" class="music-audio" src="/assets/audio/music/Pixel_Racetrack.mp3"></audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    
+    <script src="/assets/js/rapid_division.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('/assets/fonts/PressStart2P.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metallica';
+    src: url('/assets/fonts/MetallicaInspired.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-press-start {
+    font-family: 'PressStart2P', sans-serif;
+  }
+  
+  .font-metallica {
+    font-family: 'Metallica', sans-serif;
+  }

@@ -1,0 +1,18 @@
+/* root */
+:root {
+    --footer-height: 75px;
+}
+
+/* footer */
+footer {
+    bottom: 0px;
+    width: 100%;
+    flex-shrink: 0;
+    background-color: var(--accent-b);
+    color: var(--text-subdued);
+    padding: 2vh 0;
+    text-align: center;
+    font-family: 'PressStart2P';
+    font-size: 12px;
+    height: var(--footer-height);
+}

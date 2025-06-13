@@ -1,0 +1,38 @@
+:root {
+    /* main style */
+    --background: #000;
+    --background-lightest: #444;
+    --text: #fff;
+    --text-subdued: #EFF1F3;
+    --text-dim: #ccc;
+
+    --accent-a-dimmer: #750080;
+    --accent-a: #af09a7;
+    --accent-a-light: #d10cc7;
+
+    --accent-b: #a51251;
+
+    --accent-c: #faf600;
+
+    /* alt style */
+    --background-alt: #fff;
+    --background-alt-anti-flash: #eee;
+    --background-alt-dim: #ccc;
+
+    --text-alt: #000;
+    --text-alt-light: #363636;
+    --text-alt-lighter: #333;
+    --text-alt-lightest: #555;
+    --text-alt-lightest-1: #777;
+    --text-alt-lightest-2: #888;
+
+    --accent-alt-a: #2c3e50;
+
+    --accent-alt-b-dimmer: #2980b9;
+    --accent-alt-b: #3498db;
+
+    /* status */
+    --error-light: #ffcccb;
+    --success-light: #ccffd5;
+
+}

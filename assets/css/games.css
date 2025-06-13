@@ -1,0 +1,16 @@
+/* the container that the game is put in */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.play-container {
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}

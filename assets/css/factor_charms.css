@@ -1,0 +1,346 @@
+/* warmup styles */
+#warm-contianer {
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'PressStart2P', sans-serif;
+    padding: 0;
+}
+#warm-title, #warm-desc {
+    color: var(--text-alt-lightest);
+}
+
+#warm-area {
+    background-color: var(--background-alt-anti-flash);
+    color: var(--text-alt-lightest);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+#warm-area h1 {
+    font-size: 3.5rem;
+    color: var(--accent-alt-a);
+}
+#warm-area h2 {
+    font-size: 1.15rem;
+}
+#warm-area h3 {
+    font-size: 1.0rem;
+}
+
+#warm-counter {
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+#warm-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+}
+
+#warm-display > * {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+#warm-remaining {
+    font-size: 1.5rem;
+}
+
+/* general styles */
+.charm-container {
+    min-height: 75px;
+    background-color: var(--background-alt-dim);
+    padding: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.charm-container-blend {
+    min-height: 75px;
+    padding: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.factor-charm {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.2s;
+}
+.factor-charm:hover {
+    transform: scale(1.1);
+}
+
+.factor-success {
+    box-shadow: 0 0 0 3px #4CAF50, 0 0 0 6px transparent;
+    animation: flash-green 0.5s ease-out;
+  }
+  
+  .factor-fail {
+    box-shadow: 0 0 0 3px #F44336, 0 0 0 6px transparent;
+    animation: flash-red 0.5s ease-out;
+  }
+  
+  @keyframes flash-green {
+    0% { box-shadow: 0 0 0 3px #4CAF50, 0 0 0 6px #4CAF50; }
+    100% { box-shadow: 0 0 0 3px #4CAF50, 0 0 0 6px transparent; }
+  }
+  
+  @keyframes flash-red {
+    0% { box-shadow: 0 0 0 3px #F44336, 0 0 0 6px #F44336; }
+    100% { box-shadow: 0 0 0 3px #F44336, 0 0 0 6px transparent; }
+  }
+
+
+.charm-button-contianer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.factor-charm-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.factor-charm-button:hover {
+    transform: scale(1.1);
+}
+
+
+.input-controls {
+    padding: 10px;
+    text-align: center;
+}
+.simple-input-area {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.input-simple {
+    max-width: 200px;
+    min-width: 100px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--text-dim);
+    border-radius: 5px 0 0 5px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.submit-simple {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--accent-alt-b);
+    color: var(--text);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-simple:hover {
+    background-color: var(--accent-alt-b-dimmer);;
+}
+
+
+/* Game styles */
+.vflex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.hflex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.side-panel {
+    width: 15%;
+}
+
+.middle-div {
+    flex-grow: 1;
+}
+
+.horizontal-div {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+#current-number {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 0;
+    color: #2c3e50;
+}
+
+/* Button container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #f3d52a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-height: 100px;
+    width: 20%;
+    align-items: center;
+}
+
+.buttons button:hover {
+    background-color: #c5ad21;
+}
+
+.gameButton:disabled,
+.gameButton[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+    border: 1px solid #999999;
+}
+.gameButton:disabled:hover,
+.gameButton[disabled]:hover {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+
+
+
+
+#title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.svg-wrapper {
+    width: 10%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.svg-wrapper.left {
+    left: 0;
+}
+
+.svg-wrapper.right {
+    right: 0;
+}
+
+.center-content {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    top: 0;
+}
+
+#space-background {
+    width: 100%;
+    height: 100%;
+}
+
+.svg-wrapper svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+#background-chain-count {
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+    z-index: 1;
+    color: var(--text-alt-light);
+}
+
+#background-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    color: var(--text-alt-light);
+}
+.info-container {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.info-container:first-of-type {
+    left: 10px;
+}
+
+.info-container:last-of-type {
+    right: 10px;
+}
+
+.info-container span {
+    margin-right: 5px;  
+}
+
+#background-chain-count, #background-number {
+    display: inline-block;
+}

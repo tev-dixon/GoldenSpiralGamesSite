@@ -1,0 +1,128 @@
+/* game styles */
+body {
+    color: var(--text);
+    font-family: 'PressStart2P';
+}
+
+/* the question */
+.question {
+    max-height: 100%;
+    overflow: hidden;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* container for rank SVGS and answer buttons */
+.lower-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+/* container for the rank SVGs */
+.rank-container {
+    max-height: 100%;
+    overflow: hidden;
+    max-width: 310px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.rank-container-left svg {
+    transform: scaleX(1);
+    transform-origin: center center;
+}
+.rank-container-right svg {
+    transform: scaleX(-1);
+    transform-origin: center center;
+}
+
+/* container for the answer buttons */
+.answers-grid {
+    max-height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 500px;
+}
+
+/* answer buttons */
+.answer-btn {
+    background-color: var(--background-lightest);
+    color: var(--text);
+    padding: 20px;
+    font-size: 1.5em;
+    height: 18vh;
+    outline: none;
+    border: none;
+}
+
+.answer-btn:hover, .answer-btn:focus, .answer-btn:active {
+    background-color: #555555;
+    outline: none;
+}
+
+/* timer */
+span {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+span i.far.fa-clock {
+    font-size: 3rem;
+    vertical-align: middle;
+}
+span img {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    scale: 600%;
+}
+
+/* Responsive additions */
+.play-container {
+    width: 100%;
+    height: calc(100vh - var(--navbar-height) - var(--footer-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    .lower-container { gap: 20px; }
+    .answers-grid { width: 400px; }
+    .answer-btn { font-size: 1.2em; height: 15vh; }
+    .question { font-size: 1.5em; }
+}
+
+@media (max-width: 992px) {
+    .lower-container { flex-direction: column; height: auto; }
+    .rank-container { max-width: 200px; margin-bottom: 20px; }
+    .answers-grid { width: 100%; max-width: 500px; }
+    .answer-btn { font-size: 1em; height: 12vh; }
+    .question { font-size: 1.2em; }
+}
+
+@media (max-width: 768px) {
+    .rank-container { max-width: 150px; }
+    .answers-grid { gap: 10px; }
+    .answer-btn { font-size: 0.9em; height: 10vh; padding: 10px; }
+    .question { font-size: 1em; }
+    .overlay { font-size: 1.5em; }
+}
+
+@media (max-width: 576px) {
+    .rank-container { max-width: 100px; }
+    .answers-grid { grid-template-columns: 1fr; }
+    .answer-btn { font-size: 0.8em; height: 8vh; }
+    .question { font-size: 0.9em; }
+    .overlay { font-size: 1.2em; }
+}

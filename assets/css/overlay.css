@@ -1,0 +1,86 @@
+/* overlays */
+/* Defines the base state for all overlays.
+  It is hidden by default and positioned to cover the entire screen.
+*/
+.overlay {
+    /* Positioning */
+    position: fixed; /* Position relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Ensures it's on top of other content */
+
+    /* Visibility - HIDDEN by default */
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    /* Styling */
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+}
+
+/* This is the active state. When the ".show" class is added by JavaScript,
+  the overlay becomes visible and uses flexbox to center its content.
+*/
+.overlay.show {
+    /* Visibility - VISIBLE when .show class is present */
+    display: flex;
+    opacity: 1;
+
+    /* Centering content inside the overlay */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    top: var(--navbar-height);
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--text);
+    font-size: 2em;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transform: translateY(-100%); /* hide above page by default */
+    overflow: auto; /* allow scrolling within overlay if content is too tall */
+}
+.overlay.show {
+    transform: translateY(0); /* show the specific overlay */
+}
+
+/* overlay buttons */
+.overlay button { /* we over-engineer these because of client bug reports of white borders */
+    background: none;
+    color: var(--text);
+    box-shadow: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 0;
+    border-color: transparent;
+}
+.overlay button:hover,
+.overlay button:focus,
+.overlay button:focus-visible,
+.overlay button:active {
+    background: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 0;
+    border-color: transparent;
+}
+.overlay button::after,
+.overlay button::before {
+    display: none;
+}

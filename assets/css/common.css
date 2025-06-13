@@ -1,0 +1,68 @@
+/* root */
+:root {
+    --cover-padding: 60px;
+    --svg-margins: 10%;
+}
+
+/* main HTML body and SVG background setup */
+html, body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    background-image: url('/static/images/background_alt.svg');
+    background-size: 50vh;
+    background-repeat: repeat;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* the body must be at least as large as the viewport*/
+}
+main {
+    flex: 1; /* main fills up any remaining space (helps place footer)*/
+}
+svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* cover styles */
+.cover {
+    background-color: var(--background);
+    color: var(--text);
+    padding-left: var(--cover-padding);
+    padding-right: var(--cover-padding);
+    padding-top: calc(var(--cover-padding)/2);
+    padding-bottom: 0;
+    height: 100%;
+    margin-left: var(--svg-margins); /* margins for background images */
+    margin-right: var(--svg-margins);
+    font-family: 'PressStart2P';
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+/* error display styles */
+.errorlist li {
+    color: red;
+    font-size: 0.8em;
+}
+
+/* styles for invisible elements */
+.invisible {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: inherit;
+}
+
+.hardware-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}

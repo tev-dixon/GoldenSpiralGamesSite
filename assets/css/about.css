@@ -1,0 +1,17 @@
+/* header styles */
+h1 {
+    font-family: 'PressStart2P';
+    color: var(--accent-c);
+    font-size: 120px;
+    text-align: center;
+}
+
+/* about body text */
+.about-text p {
+    font-size: 18px;
+}
+
+/* fix footer to the botom of the page if big enough, otherwise follow */
+footer {
+    position: fixed;
+}

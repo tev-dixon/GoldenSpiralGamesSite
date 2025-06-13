@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <pattern id="a" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path fill="#cf0040" d="M0 0h100v100H0z"/>
+    </pattern>
+    <pattern id="b" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path fill="#8f0060" d="M0 0h100v100H0z"/>
+    </pattern>
+    <pattern id="c" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path fill="#0000ff" d="M0 0h100v100H0z"/>
+    </pattern>
+    <symbol id="d">
+      <path fill="url(#a)" stroke="#000" stroke-width="0" d="m0 50 100 50 100-50L100 0Z"/>
+      <path fill="url(#b)" stroke="#000" stroke-width="0" d="m0 50 100 50v100L0 150Z"/>
+      <path fill="url(#c)" stroke="#000" stroke-width="0" d="m100 100 100-50v100l-100 50Z"/>
+    </symbol>
+  </defs>
+  <use xlink:href="#d" transform="translate(0 -50)"/>
+  <use xlink:href="#d" transform="translate(200 -50)"/>
+  <use xlink:href="#d" transform="translate(400 -50)"/>
+  <use xlink:href="#d" transform="translate(-100 100)"/>
+  <use xlink:href="#d" transform="translate(100 100)"/>
+  <use xlink:href="#d" transform="translate(300 100)"/>
+  <use xlink:href="#d" transform="translate(500 100)"/>
+  <use xlink:href="#d" transform="translate(0 250)"/>
+  <use xlink:href="#d" transform="translate(200 250)"/>
+  <use xlink:href="#d" transform="translate(400 250)"/>
+  <use xlink:href="#d" transform="translate(-100 400)"/>
+  <use xlink:href="#d" transform="translate(100 400)"/>
+  <use xlink:href="#d" transform="translate(300 400)"/>
+  <use xlink:href="#d" transform="translate(500 400)"/>
+  <use xlink:href="#d" transform="translate(0 550)"/>
+  <use xlink:href="#d" transform="translate(200 550)"/>
+  <use xlink:href="#d" transform="translate(400 550)"/>
+</svg>
